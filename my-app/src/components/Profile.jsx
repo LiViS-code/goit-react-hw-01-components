@@ -14,17 +14,17 @@ function Profile({ avatar = userDefaultAvatar, username, tag, location, follower
       <ul class="stats">
         <li>
           <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <span class="quantity">{numberWithCommas(followers)}</span>
         </li>
 
         <li>
           <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <span class="quantity">{numberWithCommas(views)}</span>
         </li>
 
         <li>
           <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <span class="quantity">{numberWithCommas(likes)}</span>
         </li>
       </ul>
     </div>
@@ -39,6 +39,10 @@ Profile.propTypes = {
   followers: PropTypes.number,
   views: PropTypes.number,
   likes: PropTypes.number,
+}
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default Profile;
