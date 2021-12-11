@@ -1,19 +1,27 @@
-function randomColor(brightness) {
+function randomColor(saturation = 100, lightness = 100, alpha = 1) {
   let color = '';
   if (!localStorage.getItem('backgroundColorBlock')) {
-    color = generateColor(brightness);
+    color = generateColor(saturation, lightness, alpha);
   } else {
     do {
-      color = generateColor(brightness);
+      color = generateColor(saturation, lightness, alpha);
     } while (localStorage.getItem('backgroundColorBlock') === color);
   }
   localStorage.setItem('backgroundColorBlock', color);
   return color;
 }
 
-function generateColor(brightness) {
+function generateColor(saturation = 100, lightness = 100, alpha = 1) {
   return (
-    'hsla(' + Math.round(Math.random() * 360) + ', 100%,' + brightness + '%, 1)'
+    'hsla(' +
+    Math.ceil(Math.random() * 360) +
+    ',' +
+    saturation +
+    '%,' +
+    lightness +
+    '%,' +
+    alpha +
+    ')'
   );
 }
 

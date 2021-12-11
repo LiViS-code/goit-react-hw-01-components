@@ -7,7 +7,7 @@ function Statistics({ title, stats }) {
 
       <ul className="stat-list">
         {stats.map(el => (
-          <li className="item" key={el.id} style={{backgroundColor: randomColor(30)}}>
+          <li className="item" key={el.id} style={{backgroundColor: randomColor(100, 30, 1)}}>
             <span className="label">{el.label}</span>
             <span className="percentage">{el.percentage}%</span>
           </li>
