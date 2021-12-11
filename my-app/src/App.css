@@ -87,7 +87,7 @@ body {
 
 .statistics {
   width: 300px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   padding-top: 30px;
   overflow: hidden;
   border-radius: 5px;
@@ -114,25 +114,127 @@ body {
 }
 
 .item:nth-child(1) {
-  background-color: darkcyan;
+  background-color: #008b8b;
 }
 
 .item:nth-child(2) {
-  background-color: darkmagenta;
+  background-color: #8b008b;
 }
 
 .item:nth-child(3) {
-  background-color: darkblue;
+  background-color: #00008b;
 }
 
 .item:nth-child(4) {
-  background-color: darkolivegreen;
+  background-color: #556b2f;
 }
 
 .item:nth-child(5) {
-  background-color: darkred;
+  background-color: #8b0000;
 }
 
 .item > .label {
   color: #fff;
+}
+
+.friend-list {
+  margin: 0 auto 30px;
+  width: 300px;
+}
+
+.friend-list > .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  border-radius: 5px;
+  color: #000;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2) inset;
+}
+
+.friend-list > .item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.friend-list > .item > .avatar {
+  width: 80px;
+  margin-right: 30px;
+  margin-bottom: 0;
+  border-radius: 5px;
+}
+
+.friend-list > .item > .name {
+  margin-bottom: 0;
+}
+
+.status {
+  width: 25px;
+  height: 25px;
+  margin-right: 30px;
+  border-radius: 50%;
+  background-color: #ff0000bf;
+}
+
+.status.online {
+  background-color: #0dee0d;
+  box-shadow:0 0 20px #0dee0d;
+}
+
+.friend-list > .item.online {
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.transaction-history {
+  margin: 0 auto 30px;
+  width: 95%;
+  min-width: 320px;
+  max-width: 500px;
+  border-collapse: collapse;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.transaction-history > thead {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00bfff;
+}
+
+.transaction-history  th,
+.transaction-history td {
+  padding: 15px;
+  border: none;
+  border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.transaction-history  td {
+  text-align: center;
+}
+
+.transaction-history  tr:nth-child(even) {
+  background-color: #eceaea;
+}
+
+.transaction-history thead th:first-child {
+  border-radius: 5px 0 0 0;
+}
+
+.transaction-history thead th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.transaction-history tbody tr:last-child td:first-child {
+	border-radius: 0 0 0 5px;
+}
+
+.transaction-history tbody tr:last-child td:last-child {
+	border-radius: 0 0 5px 0;
 }

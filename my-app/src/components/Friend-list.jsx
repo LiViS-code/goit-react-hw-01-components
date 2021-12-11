@@ -3,11 +3,11 @@ import userDefaultAvatar from '../images/usr_default.png'
 
 function FriendList({props}) {
   return (
-    <ul className="friend__list">
+    <ul className="friend-list">
       {
         props.map(({id, isOnline, avatar = userDefaultAvatar, name}) => (
-          <li className="item" key={id}>
-            <span className="status" data-online={isOnline}></span>
+          <li className={isOnline ? 'item online' : 'item'} key={id}>
+            <span className={isOnline ? 'status online' : 'status'}></span>
             <img className="avatar" src={avatar} alt="User avatar" width="48" />
             <p className="name">{name}</p>
           </li>

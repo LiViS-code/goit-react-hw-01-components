@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function Transaction({props}) {
+function TransactionHistory({props}) {
   return (
     <table className="transaction-history">
       <thead>
@@ -26,7 +26,7 @@ function Transaction({props}) {
   );
 }
 
-Transaction.propsTypes = {
+TransactionHistory.propsTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
@@ -35,4 +35,4 @@ Transaction.propsTypes = {
   }).isRequired,).isRequired,
 }
 
-export default Transaction;
+export default TransactionHistory;
