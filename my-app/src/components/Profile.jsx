@@ -1,3 +1,4 @@
+import numberWithCommas from '../lib/number-with-commas';
 import PropTypes from 'prop-types';
 import userDefaultAvatar from '../images/usr_default.png'
 
@@ -39,10 +40,6 @@ Profile.propTypes = {
   followers: PropTypes.number,
   views: PropTypes.number,
   likes: PropTypes.number,
-}
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default Profile;
