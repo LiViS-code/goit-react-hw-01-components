@@ -113,26 +113,6 @@ body {
   color: #fff;
 }
 
-.item:nth-child(1) {
-  background-color: #008b8b;
-}
-
-.item:nth-child(2) {
-  background-color: #8b008b;
-}
-
-.item:nth-child(3) {
-  background-color: #00008b;
-}
-
-.item:nth-child(4) {
-  background-color: #556b2f;
-}
-
-.item:nth-child(5) {
-  background-color: #8b0000;
-}
-
 .item > .label {
   color: #fff;
 }
