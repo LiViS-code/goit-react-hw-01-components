@@ -1,8 +1,10 @@
 import './App.css';
 import Profile from './components/Profile';
 import Statistics from './components/Statistics';
+import FriendList from './components/Friend-list';
 import user from './data/user.json';
 import data from './data/data.json';
+import friends from './data/friends.json';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         likes={user.stats.likes}
       />
       <Statistics title="Upload stats" stats={data} />
+      <FriendList props={friends} />
     </>
   );
 }
