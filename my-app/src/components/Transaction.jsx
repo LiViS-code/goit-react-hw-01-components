@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function TransactionHistory({props}) {
+function TransactionHistory({transactions}) {
   return (
     <table className="transaction-history">
       <thead>
@@ -13,7 +13,7 @@ function TransactionHistory({props}) {
 
       <tbody>
         {
-          props.map(({id, type, amount, currency}) => (
+          transactions.map(({id, type, amount, currency}) => (
             <tr key={id}>
               <td>{type}</td>
               <td>{amount}</td>

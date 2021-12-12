@@ -1,12 +1,19 @@
 import numberWithCommas from '../lib/number-with-commas';
 import PropTypes from 'prop-types';
-import userDefaultAvatar from '../images/usr_default.png'
+import userDefaultAvatar from '../images/usr_default.png';
 
-function Profile({ avatar = userDefaultAvatar, username, tag, location, followers = 0, views = 0, likes = 0 }) {
+function Profile({ user }) {
+  const {
+    avatar = userDefaultAvatar,
+    username,
+    tag,
+    location,
+    stats: { followers, views, likes },
+  } = user;
   return (
     <div className="profile">
       <div className="description">
-        <img src={avatar} alt={username} className="avatar" width = "150"/>
+        <img src={avatar} alt={username} className="avatar" width="150" />
         <p className="name">{username}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
@@ -37,9 +44,11 @@ Profile.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
-}
+  stats: PropTypes.shape({
+    followers: PropTypes.number,
+    views: PropTypes.number,
+    likes: PropTypes.number,
+  }),
+};
 
 export default Profile;
