@@ -199,22 +199,30 @@ body {
   text-align: center;
 }
 
-.transaction-history  tr:nth-child(even) {
-  background-color: #eceaea;
-}
-
 .transaction-history thead th:first-child {
-  border-radius: 5px 0 0 0;
+  border-top-left-radius: 5px;
 }
 
 .transaction-history thead th:last-child {
-  border-radius: 0 5px 0 0;
+  border-top-right-radius: 5px;
+}
+
+.transaction-history tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.transaction-history tbody tr:nth-child(even) {
+  background-color: #eceaea;
 }
 
 .transaction-history tbody tr:last-child td:first-child {
-	border-radius: 0 0 0 5px;
+	border-bottom-left-radius: 5px;
 }
 
 .transaction-history tbody tr:last-child td:last-child {
-	border-radius: 0 0 5px 0;
+	border-bottom-right-radius: 5px;
+}
+
+.transaction-history tbody tr:hover {
+  background-color: rgb(229, 242, 172);
 }
