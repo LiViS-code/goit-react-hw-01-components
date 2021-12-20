@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import userDefaultAvatar from '../images/usr_default.png';
+import userDefaultAvatar from '../../images/usr_default.png';
 
 function FriendList({ friends }) {
   return (

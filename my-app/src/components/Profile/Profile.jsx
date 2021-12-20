@@ -1,6 +1,6 @@
-import numberWithCommas from '../lib/number-with-commas';
 import PropTypes from 'prop-types';
-import userDefaultAvatar from '../images/usr_default.png';
+import numberWithCommas from '../../lib/number-with-commas';
+import userDefaultAvatar from '../../images/usr_default.png';
 
 function Profile({ user }) {
   const {
